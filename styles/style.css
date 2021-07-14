@@ -252,11 +252,3 @@ body{
         width: 100%;
     }
 }
-
-    /* responsive for tablet */
-@media only screen and (min-width:650px)  {
-        .banner{
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-    }
