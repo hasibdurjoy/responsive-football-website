@@ -1,15 +1,23 @@
-/* imports */
+   /* -----------
+    icon import 
+    ------------*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-/* common styles */
+    /*---------- 
+    common styles 
+    ==============*/
 body{
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
-/* extra styles */
+    /*-----------
+    extra styles 
+    ============*/
 
-/* animation in button  */
+    /*-------------------- 
+      animation in button  
+      ====================*/
 @keyframes colouring {
     0% {
         background-color: #E02C6D;
@@ -18,7 +26,7 @@ body{
     25% {
         background-color: yellow;
         color: black;
-        transform: scale(1.3);
+        transform: scale(1.1);
     }
     0% {
         background-color: #E02C6D;
@@ -26,11 +34,13 @@ body{
     }
     100% {
         background-color: yellow;
-        transform: scale(1.3);
+        transform: scale(1.1);
     }
 }
 
-/* banner styles */
+    /*------------
+     banner styles 
+     =============*/
 .banner-section{
     background-color: #2D25A0;
     padding: 85px;
@@ -42,10 +52,6 @@ body{
 .banner-title {
     width: 49%;
     margin-right: 25px;
-}
-.banner-thumbnail{
-    width: 49%;
-    margin-left: 25px;
 }
 .banner-title h1{
     font-size: 64px;
@@ -63,11 +69,18 @@ body{
 .fa-arrow-right{
     margin-left: 5px;
 }
+.banner-thumbnail{
+    width: 49%;
+    margin-left: 25px;
+}
 .banner-thumbnail img{
     width: 100%;
 }
 
-/* animation in header  */
+    /*------------------
+     animation in header
+     ====================*/
+
 .banner-section:hover .banner-thumbnail-image {
     transform: rotate(360deg)  scale(0.85);
     transform-origin: center;
@@ -82,9 +95,13 @@ body{
     transition: transform 3s ease-in-out;
     
 }
+
 /* main part styles */
 
-/* players styles  */
+
+    /*-------------- 
+    players styles  
+    ================*/
 
 .players{
     display: grid;
@@ -112,12 +129,12 @@ body{
     color: #6C6C6C;
     font-size: 16px;
 }
-/* fixures and live matches  */
+
+    /*------------------------ 
+     fixures and live matches  
+     =========================*/
 
 .match-fixures h1{
-    text-align: center;
-}
-.match p{
     text-align: center;
 }
 .matches{
@@ -140,23 +157,29 @@ body{
     border: 2px solid red;
     border-radius: 50%;
 }
+.match p{
+    text-align: center;
+}
 
-/* watch match styles */
+    /*------------------
+     watch match styles 
+     ===================*/
 .watch-match{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* footer design */
+    /*------------ 
+    footer design 
+    =============*/
 .footer-section{
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .footer-logo img{
-    width: 480px;
+    width: 483px;
     height: 110px;
 }
 .footer-icons a{
@@ -164,9 +187,23 @@ body{
     height: 32px;
     padding: 0px 10px;
 }
+.footer-bottom-text{
+    font-size: 18px;
+    font-weight: 700;
+}
 
-/* responsive */
-@media only screen and (max-width:660px) {
+    /*-------- 
+    responsive 
+    ===========*/
+
+    /*---------------------------- 
+    responsive for mobile device 
+    ===============================*/
+@media only screen and (max-width:640px) {
+
+    /*---------------- 
+    banner section  
+    =================*/
 
     .banner-section{
         width: 90%;
@@ -177,6 +214,9 @@ body{
         display: flex;
         flex-direction: column;
     }
+    .banner-title button{
+        margin-bottom: 30px;
+    }
     .banner-thumbnail{
         width: 100%;
         margin: 0;
@@ -184,9 +224,11 @@ body{
     .banner-thumbnail img{
         width: 100%;
     }
-    .banner-title button{
-        margin-bottom: 30px;
-    }
+
+    /*-------------
+    player section
+    ==============*/
+
     .players{
         display: flex;
         flex-direction: column;
@@ -198,13 +240,23 @@ body{
         align-items: center;
     }
 
+    /*------------ 
+    footer section
+    ===============*/
+
     .footer-logo img{
-        width: 250px;
+        width: 125px;
         height: 90px;
     }
     iframe{
         width: 100%;
     }
-
-    
 }
+
+    /* responsive for tablet */
+@media only screen and (min-width:650px)  {
+        .banner{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+    }
